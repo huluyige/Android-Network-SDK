@@ -32,10 +32,23 @@ Get active network info:
 
 Monitering network change:
 --------------
-		NetworkBroadcastReceiver.setNetworkChangeListener(this);
-		
-		
-			@Override
+**Broadcast receiver declaration**
+
+        <receiver android:name="com.huluyige.android.networksdk.NetworkBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        
+**Register listener**      
+
+	NetworkBroadcastReceiver.setNetworkChangeListener(this);
+
+
+**Method implementation**
+
+	@Override
 	public void onNetworkChangeListener(NetworkType networkType,
 			NetworkEvent networkEvent, Bundle networkDetails) {
 		switch (networkType) {
