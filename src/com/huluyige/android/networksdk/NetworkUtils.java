@@ -22,19 +22,16 @@ public class NetworkUtils {
 				&& activeNetwork.isConnectedOrConnecting();
 		return isConnected;
 	}
-	
-	public static void wifiOn(Context context) {
-		WifiManager wifiman = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
-		wifiman.setWifiEnabled(true);
+
+	public static void setwifiEnabled(Context context, boolean enabled) {
+		WifiManager wifiman = (WifiManager) context
+				.getSystemService(Context.WIFI_SERVICE);
+		wifiman.setWifiEnabled(enabled);
 	}
-	
-	public static void wifiOff(Context context) {
-		WifiManager wifiman = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
-		wifiman.setWifiEnabled(false);		
-	}
-	
+
 	public static boolean isWifiEnabled(Context context) {
-		WifiManager wifiman = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+		WifiManager wifiman = (WifiManager) context
+				.getSystemService(Context.WIFI_SERVICE);
 		return wifiman.isWifiEnabled();
 	}
 }
