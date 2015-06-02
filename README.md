@@ -43,6 +43,7 @@ Monitering network change:
         
 **Register listener**      
 
+	NetworkBroadcastReceiver networkReceiver = new NetworkBroadcastReceiver();
 	NetworkBroadcastReceiver.setNetworkChangeListener(this);
 
 
