@@ -30,7 +30,7 @@ Get active network info:
 			break;
 		}
 
-Monitering network change:
+Monitoring network change:
 --------------
 **Broadcast receiver declaration**
 
