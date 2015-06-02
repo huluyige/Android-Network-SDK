@@ -13,7 +13,7 @@ import android.util.Log;
 public class NetworkBroadcastReceiver extends BroadcastReceiver {
 
 	public static final String TAG = "NetworkBroadcastReceiver";
-	private static NetworkChangeListener listener;
+	private NetworkChangeListener listener;
 	private static String currentSsid;
 	private static String currentBssid;
 	private static String currentGateway;
@@ -182,11 +182,11 @@ public class NetworkBroadcastReceiver extends BroadcastReceiver {
 				(ipAddress >> 24 & 0xff));
 	}
 
-	public static void setNetworkChangeListener(NetworkChangeListener listener) {
-		NetworkBroadcastReceiver.listener = listener;
+	public void setNetworkChangeListener(NetworkChangeListener listener) {
+		this.listener = listener;
 	}
 
-	public static interface NetworkChangeListener {
+	public interface NetworkChangeListener {
 		void onNetworkChangeListener(NetworkType networkType,
 				NetworkEvent networkEvent, Bundle networkDetails);
 	}
