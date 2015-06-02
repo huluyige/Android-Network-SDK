@@ -31,9 +31,9 @@ Get active network info:
 		}
 Get/Set Wifi enabled:
 --------------
-NetworkUtils.setWifiEnabled(this, true);
+	NetworkUtils.setWifiEnabled(this, true);
 
-boolean enabled = NetworkUtils.isWifiEnabled(this);
+	boolean enabled = NetworkUtils.isWifiEnabled(this);
 
 Monitoring network change:
 --------------
